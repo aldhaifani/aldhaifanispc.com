@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--============== CSS ================-->
-  <link rel="stylesheet" href="./css/style.css">
+		<!--============== CSS ================-->
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/setup.css" />
 
-  <title>Welcome - Super Gel</title>
-</head>
-<body>
-  
-  <!--============== JS ================-->
-  <script src="./js/index.js"></script>
-</body>
+		<!--============== FontAwesome ================-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<title>Welcome - Super Gel</title>
+	</head>
+	<body>
+		<div class="nav" id="nav">
+			<div class="container">
+				<div class="logo__container">
+					<a href="#">
+						<img src="./images/logo.png" alt="logo" />
+						<h1 class="logo__text">Super Gel</h1>
+					</a>
+				</div>
+				<div id="nav-toggle" class="nav-toggle">
+					<i id="nav-burger" class="fa-solid fa-bars fa-lg burger"></i>
+					<i id="nav-close" class="fa-solid fa-x fa-lg close"></i>
+				</div>
+				<div id="nav-list" class="nav__list">
+					<ul>
+						<li>
+							<a href="#"><p>Who We Are</p></a>
+						</li>
+						<li>
+							<a href="#"><p>How To Use</p></a>
+						</li>
+						<li>
+							<a href="#"><p>Contact Us</p></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--============== JS ================-->
+		<script src="./js/index.js"></script>
+	</body>
 </html>
