@@ -35,6 +35,23 @@ a:hover {
 	color: var(--primary-color);
 }
 
+button {
+	font-size: 20px;
+	width: auto;
+	height: auto;
+	border: none;
+	border-radius: 40px;
+	padding: 10px 20px;
+	background-color: var(--primary-color);
+	cursor: pointer;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
 .container {
 	width: 80%;
 	display: flex;
@@ -110,7 +127,7 @@ a:hover {
 #main {
 	width: 100vw;
 	display: flex;
-	padding: 7rem;
+	padding: 7rem 7rem 0 7rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -191,23 +208,6 @@ a:hover {
 	font-weight: 200;
 }
 
-#main .hero__text button {
-	font-size: 20px;
-	width: auto;
-	height: auto;
-	border: none;
-	border-radius: 40px;
-	padding: 10px 20px;
-	background-color: var(--primary-color);
-	cursor: pointer;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease 0s;
-}
-
-#main .hero__text button:hover {
-	opacity: 0.8;
-}
-
 #main .hero__img {
 	display: flex;
 	flex-direction: column;
@@ -226,6 +226,7 @@ a:hover {
     Line
 ============*/
 .hr-container {
+  margin: 0 0 2.5rem 0;
 	width: 80%;
 	text-align: center;
 }
@@ -247,6 +248,55 @@ a:hover {
 	height: 1px;
 }
 
+/*================
+    Who We Are
+=================*/
+#who_we_are {
+  width: 100vw;
+  padding: 0 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+#who_we_are .we__title {
+  color: var(--primary-color);
+  font-size: 28px;
+  width: 70%;
+  text-align: center;
+}
+
+#who_we_are .we__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+#who_we_are .we__list .we__list_item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+  font-size: 17px;
+}
+
+#who_we_are .we__list .we__list_item h2 {
+  color: var(--primary-color);
+}
+
+#who_we_are .we__list .we__list_item p {
+  text-align: justify;
+}
+
+#who_we_are .hr-container {
+  margin-top: 0;
+}
+
 /*===============
   Responsiveness
 ===============*/
@@ -262,9 +312,9 @@ a:hover {
 		width: 40%;
 	}
 
-	/* -- nav -- */
+	/* -- hero -- */
 	#main {
-		padding: 7rem 3.5rem 3.5rem 3.5rem;
+		padding: 7rem 3.5rem 0 3.5rem;
 	}
 
 	#main .hero__text {
@@ -288,6 +338,28 @@ a:hover {
 	#main .hero__img .arrow {
 		width: 90px;
 	}
+
+	/* -- who we are -- */
+  #who_we_are {
+    padding: 0 3rem;
+  }
+  
+  #who_we_are .we__title {
+    font-size: 25px;
+  }
+  
+  #who_we_are .we__list {
+    justify-content: space-between;
+  }
+  
+  #who_we_are .we__list .we__list_item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
 }
 
 /* --- small & medium tablet --- */
@@ -354,7 +426,7 @@ a:hover {
 
 	/* -- hero -- */
 	#main {
-		padding: 7rem 1.5rem 1.5rem 1.5rem;
+		padding: 7rem 1.5rem 0 1.5rem;
 	}
 
 	#main .hero {
@@ -375,7 +447,7 @@ a:hover {
 		font-size: 17px;
 	}
 
-	#main .hero__text button {
+  button {
 		font-size: 13px;
 		padding: 10px 15px;
 	}
@@ -388,6 +460,29 @@ a:hover {
 	#main .hero__img .arrow {
 		width: 90px;
 	}
+
+	/* -- hero -- */
+  #who_we_are {
+    padding: 0 1.5rem;
+    row-gap: 2rem;
+  }
+  
+  #who_we_are .we__title {
+    font-size: 20px;
+    width: 75%;
+  }
+  
+  #who_we_are .we__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  
+  #who_we_are .we__list .we__list_item {
+    width: 90%;
+    row-gap: 1.5rem;
+    font-size: 17px;
+  }
 }
 
 /* --- small Phones--- */
@@ -401,7 +496,7 @@ a:hover {
 		font-size: 18px;
 	}
 
-	#main .hero__text button {
+  button {
 		font-size: 13px;
 		padding: 10px 15px;
 	}
@@ -414,4 +509,27 @@ a:hover {
 	#main .hero__img .arrow {
 		width: 70px;
 	}
+
+  /* -- hero -- */
+  #who_we_are {
+    padding: 0 .5rem;
+    row-gap: 2rem;
+  }
+  
+  #who_we_are .we__title {
+    font-size: 13px;
+    width: 90%;
+  }
+  
+  #who_we_are .we__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  
+  #who_we_are .we__list .we__list_item {
+    width: 90%;
+    row-gap: 1.5rem;
+    font-size: 13px;
+  }
 }
