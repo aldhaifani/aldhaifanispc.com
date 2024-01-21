@@ -636,6 +636,7 @@ button:hover {
 
 	#main .hero {
 		flex-direction: column;
+		row-gap: 1rem;
 	}
 
 	#main .hero__text {
