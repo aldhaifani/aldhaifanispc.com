@@ -1,7 +1,8 @@
 /*============
     Fonts
 ============*/
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&family=Inter+Tight:ital,wght@0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 /*============
     Global
@@ -103,11 +104,154 @@ a:hover {
 	transition: all 300ms ease;
 }
 
+/*============
+    Main
+============*/
+#main {
+	width: 100vw;
+	display: flex;
+	padding: 7rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ------- Lang Btn ------*/
+#main .language-btns {
+	text-align: center;
+	font-size: 15px;
+}
+
+#main .check {
+	position: relative;
+	width: 30px;
+	cursor: pointer;
+}
+
+#main .check::before {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 15px;
+	background-color: #333;
+	border-radius: 25px;
+}
+
+#main .check:checked::before {
+	background-color: #e0dd1b;
+}
+
+#main .check::after {
+	content: '';
+	position: absolute;
+	left: 0px;
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 25px;
+	transition: 0.25s;
+	border: 2px solid #333;
+	box-sizing: border-box;
+}
+
+#main .check:checked::after {
+	left: 12px;
+	border: 2px solid #e0dd1b;
+}
+
+/* ------- Hero ------*/
+#main .hero {
+	width: 100%;
+	height: fit-content;
+	margin: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#main .hero__text {
+	height: 61vh;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#main .hero__text .hero__title {
+	font-size: 64px;
+}
+
+#main .hero__text .hero__title span {
+	color: var(--primary-color);
+}
+
+#main .hero__text .hero__description {
+	font-size: 25px;
+	font-style: italic;
+	font-weight: 200;
+}
+
+#main .hero__text button {
+	font-size: 20px;
+	width: auto;
+	height: auto;
+	border: none;
+	border-radius: 40px;
+	padding: 10px 20px;
+	background-color: var(--primary-color);
+	cursor: pointer;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+}
+
+#main .hero__text button:hover {
+	opacity: 0.8;
+}
+
+#main .hero__img {
+	display: flex;
+	flex-direction: column;
+}
+
+#main .hero__img .syringe {
+	width: 450px;
+	height: 350px;
+}
+
+#main .hero__img .arrow {
+	width: 100px;
+}
+
+/*============
+    Line
+============*/
+.hr-container {
+	width: 80%;
+	text-align: center;
+}
+
+.hr-text {
+	font-size: 20px;
+	position: relative;
+	border: 0;
+	height: 1.5em;
+	width: 100%;
+}
+.hr-text:before {
+	content: '';
+	position: absolute;
+	background: linear-gradient(to right, transparent, #1f2148, transparent);
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+}
+
 /*===============
   Responsiveness
 ===============*/
 
-/* --- tablet --- */
+/* --- large tablets --- */
 @media screen and (max-width: 1180px) {
 	.container {
 		width: 90%;
@@ -117,9 +261,36 @@ a:hover {
 	#nav .nav__list {
 		width: 40%;
 	}
+
+	/* -- nav -- */
+	#main {
+		padding: 7rem 3.5rem 3.5rem 3.5rem;
+	}
+
+	#main .hero__text {
+		height: 50vh;
+		width: 60%;
+	}
+
+	#main .hero__text .hero__title {
+		font-size: 50px;
+	}
+
+	#main .hero__text .hero__description {
+		font-size: 20px;
+	}
+
+	#main .hero__img .syringe {
+		width: 450px;
+		height: 330px;
+	}
+
+	#main .hero__img .arrow {
+		width: 90px;
+	}
 }
 
-/* --- phones & small tablet --- */
+/* --- small & medium tablet --- */
 @media screen and (max-width: 970px) {
 	/* -- nav -- */
 	#nav {
@@ -160,6 +331,7 @@ a:hover {
 	#nav .nav__list ul li:hover {
 		background-color: var(--accent-color);
 	}
+
 	#nav .nav__list ul li a {
 		width: 100%;
 		height: 100%;
@@ -178,5 +350,68 @@ a:hover {
 
 	#nav .nav-toggle .burger {
 		display: block;
+	}
+
+	/* -- hero -- */
+	#main {
+		padding: 7rem 1.5rem 1.5rem 1.5rem;
+	}
+
+	#main .hero {
+		flex-direction: column;
+	}
+
+	#main .hero__text {
+		height: calc(100vh - 7rem - 300px - 5.5rem);
+		width: 100%;
+		margin-bottom: 1.5rem;
+	}
+
+	#main .hero__text .hero__title {
+		font-size: 39px;
+	}
+
+	#main .hero__text .hero__description {
+		font-size: 17px;
+	}
+
+	#main .hero__text button {
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+
+	#main .hero__img .syringe {
+		width: 300px;
+		height: 250px;
+	}
+
+	#main .hero__img .arrow {
+		width: 90px;
+	}
+}
+
+/* --- small Phones--- */
+@media screen and (max-width: 490px) {
+	/* -- hero -- */
+	#main .hero__text .hero__title {
+		font-size: 30px;
+	}
+
+	#main .hero__text .hero__description {
+		font-size: 18px;
+	}
+
+	#main .hero__text button {
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+
+	#main .hero__img .syringe {
+		width: 250px;
+		height: 200px;
+	}
+
+	#main .hero__img .arrow {
+		width: 70px;
 	}
 }
