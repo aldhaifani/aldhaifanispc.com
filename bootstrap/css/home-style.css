@@ -2,6 +2,7 @@
   Fonts & Variables
 ===================*/
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&family=Inter+Tight:ital,wght@0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 :root {
 	--primary: #f9b51e;
@@ -64,6 +65,51 @@ nav {
 }
 
 /*===============
+    Lang Btn
+===============*/
+.language_btn_container {
+	padding-top: 1rem;
+	font-size: 15px;
+}
+
+.check {
+	position: relative;
+	width: 30px;
+	cursor: pointer;
+}
+
+.check::before {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 15px;
+	background-color: var(--dark);
+	border-radius: 25px;
+}
+
+.check:checked::before {
+	background-color: var(--primary);
+}
+
+.check::after {
+	content: '';
+	position: absolute;
+	left: 0px;
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 25px;
+	transition: 0.25s;
+	border: 2px solid #333;
+	box-sizing: border-box;
+}
+
+.check:checked::after {
+	left: 12px;
+	border: 2px solid var(--secondary);
+}
+
+/*===============
     Hero
 ===============*/
 .hero {
@@ -85,21 +131,59 @@ nav {
 	height: 100%;
 }
 
+/*============
+    Line
+============*/
+.hr-container {
+	margin: 1rem 0;
+	width: 100vw;
+	text-align: center;
+}
+
+.hr-text {
+	background: linear-gradient(to right, transparent, #1f2148, transparent);
+	width: 80%;
+	height: 0.02rem;
+}
+
+/*===============
+    Who we are
+===============*/
+.who-we-are {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.we_title {
+	color: var(--primary);
+}
+
+.fa-solid {
+	color: var(--primary);
+}
+
 /*===================
     Responsiveness
 ====================*/
 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) {
+	.custom_title1 {
+		font-size: 1.5rem;
+	}
+	.custom_title2 {
+		font-size: 1rem;
+	}
+
 	/*--- Hero ---*/
 	.hero {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-    text-align: center;
+		text-align: center;
 	}
-  .hero .hero__p {
-    text-align: left;
-  }
+	.hero .hero__p {
+		text-align: left;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -112,6 +196,13 @@ nav {
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (max-width: 992px) {
+	.custom_title1 {
+		font-size: 2rem;
+	}
+	.custom_title2 {
+		font-size: 1.5rem;
+	}
+
 	/*--- NavBar ---*/
 	.navbar-brand img {
 		width: 40px;
@@ -124,9 +215,6 @@ nav {
 	.hero {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-	}
-	.hero .hero__title {
-		font-size: 1.5rem;
 	}
 	.hero .hero__p {
 		font-size: 1rem;
