@@ -1,0 +1,134 @@
+/*===================
+  Fonts & Variables
+===================*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&family=Inter+Tight:ital,wght@0,400;1,200&display=swap');
+
+:root {
+	--primary: #f9b51e;
+	--dark: #1f2148;
+	--secondary: #d3d2d2;
+	--white-color: #ffffff;
+}
+
+/*===============
+    Global
+===============*/
+body {
+	background-color: var(--white-color);
+	font-family: 'Inter Tight', sans-serif;
+	color: var(--text-color);
+}
+a {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.btn-primary {
+	background: var(--primary);
+	border: none;
+	color: var(--dark);
+	padding: 8px 15px;
+	border-radius: 40px;
+	cursor: pointer;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+}
+
+.btn-primary:hover {
+	background: var(--primary);
+	border: none;
+	color: var(--dark);
+	opacity: 0.8;
+}
+
+/*===============
+    NavBar
+===============*/
+nav {
+	-webkit-box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.21);
+	-moz-box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.21);
+	box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.21);
+	background: var(--white-color);
+}
+
+.navbar-brand img {
+	width: 45px;
+	height: 40px;
+}
+
+.brand_logo__text {
+	font-size: 30px;
+	font-family: 'Archivo', sans-serif;
+	font-weight: 100;
+}
+
+/*===============
+    Hero
+===============*/
+.hero {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.hero .row {
+	align-items: center;
+}
+
+.hero .outstand__text {
+	color: var(--primary);
+}
+
+.img-max {
+	max-width: 390px;
+	width: 100%;
+	max-height: 270px;
+	height: 100%;
+}
+
+/*===================
+    Responsiveness
+====================*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 576px) {
+	/*--- Hero ---*/
+	.hero {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+    text-align: center;
+	}
+  .hero .hero__p {
+    text-align: left;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+	.btn-primary {
+		padding: 6px 12px;
+		border-radius: 40px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+	/*--- NavBar ---*/
+	.navbar-brand img {
+		width: 40px;
+		height: 35px;
+	}
+	.brand_logo__text {
+		font-size: 26px;
+	}
+	/*--- Hero ---*/
+	.hero {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+	.hero .hero__title {
+		font-size: 1.5rem;
+	}
+	.hero .hero__p {
+		font-size: 1rem;
+	}
+}
