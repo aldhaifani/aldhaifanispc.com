@@ -24,6 +24,10 @@
 /*===============
     Accordion
 ===============*/
+.how_to_use_intro_text {
+	text-align: justify;
+}
+
 .how_to_use-container {
 	padding-top: 2rem;
 	padding-bottom: 4rem;
