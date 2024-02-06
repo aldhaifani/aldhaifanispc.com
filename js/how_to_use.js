@@ -3,7 +3,7 @@ const acc = document.getElementById('accordionExample');
 
 accordionItems.forEach((el) => {
 	el.addEventListener('shown.bs.collapse', (e) => {
-		var scrollOffset = acc.scrollTop + el.parentNode.offsetTop + "3em";
+		var scrollOffset = acc.scrollTop + el.parentNode.offsetTop;
 		window.scroll({
 			top: scrollOffset,
 			left: 0,
