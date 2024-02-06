@@ -120,6 +120,7 @@ nav {
 	padding-top: 2rem;
 	background: var(--dark);
 	color: var(--white-color);
+	bottom: 0;
 }
 
 .footer a {
